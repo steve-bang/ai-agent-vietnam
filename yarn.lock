@@ -3580,7 +3580,7 @@ __metadata:
     autoprefixer: ^10.4.13
     class-variance-authority: ^0.7.0
     clsx: ^2.1.1
-    contentlayer: 0.3.4
+    contentlayer: latest
     cross-env: ^7.0.3
     esbuild: 0.18.11
     eslint: ^8.45.0
@@ -4494,7 +4494,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"contentlayer@npm:0.3.4, contentlayer@npm:^0.3.4":
+"contentlayer@npm:^0.3.4, contentlayer@npm:latest":
   version: 0.3.4
   resolution: "contentlayer@npm:0.3.4"
   dependencies:

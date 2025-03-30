@@ -15,7 +15,7 @@ const siteMetadata = {
   linkedin: 'https://www.linkedin.com/in/steve-bang-924ab6284/',
   github: 'https://github.com/steve-bang',
   facebook: 'https://facebook.com',
-  locale:'vi-VN',
+  locale: 'vi-VN',
   // youtube: 'https://youtube.com',
   analytics: {
     // If you want to use an analytics provider you have to add it to the

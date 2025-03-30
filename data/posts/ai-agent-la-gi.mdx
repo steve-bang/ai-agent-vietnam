@@ -14,7 +14,8 @@ canonicalUrl: 'https://aiagentvn.org/posts/n8n-la-gi-nhung-dieu-can-biet-ve-n8n-
 # 1. Khái niệm AI Agent là gì?
 
 AI Agent là một hệ thống sử lý thông tin từ bên ngoài và đưa ra quyết định để giúp bạn đạt được mục đích. Cơ bản thì AI Agent hoạt động như sau:
-1. Lấy thông tin từ môi trường 
+
+1. Lấy thông tin từ môi trường
 2. Xử lý thông tin và đưa ra quyết định
 3. Thực hiện 1 hành động cụ thể
 4. Đạt được mục tiêu
@@ -27,19 +28,20 @@ Trong lĩnh vực xe ô tô, thì AI Agent chính là hệ thống xe tự lái.
 
 Bất kỳ hệ thống nào mà có các yếu tố tương tự như mình đã nêu ở trên thì đó chính là AI Agent.
 
-# 2. AI Agent với GenAI  
+# 2. AI Agent với GenAI
 
-GenAI hay còn gọi là Generative AI, trên thế giới cũng đã có những hệ thống GenAI này rồi như là ChatGPT, Grok, Gemini, DeepSeek,... Hệ thống AI này là giống như kiểu bạn hỏi gì trả lời đó, lấy thông tin từ input/ prompt của bạn và sẽ trả lời cho câu hỏi của bạn. 
+GenAI hay còn gọi là Generative AI, trên thế giới cũng đã có những hệ thống GenAI này rồi như là ChatGPT, Grok, Gemini, DeepSeek,... Hệ thống AI này là giống như kiểu bạn hỏi gì trả lời đó, lấy thông tin từ input/ prompt của bạn và sẽ trả lời cho câu hỏi của bạn.
 
-Trong hệ thống AI Agent sẽ dùng GenAI để xử lý thông tin và đưa ra quyết định hành động cụ thể nào đó. AI Agent cho thấy sự thông minh so với GenAI như thế nào? 
+Trong hệ thống AI Agent sẽ dùng GenAI để xử lý thông tin và đưa ra quyết định hành động cụ thể nào đó. AI Agent cho thấy sự thông minh so với GenAI như thế nào?
 
 # 3. Các thành phần
 
 ![AI Agent Components](/static/images/ai-agent-components.png)
 
-Các thành phần trong AI Agent: 
+Các thành phần trong AI Agent:
+
 - **Input**: Đây là tác nhân bên ngoài để thực hiện, nó có thể là input từ user, có thể là scheduler đã được lên từ trước, từ webhook,...
-- **Tools**: Để có được sự thông minh thì hệ thống cần phải có thêm thông tin chính xác từ các hệ thống khác để lấy dữ liệu và đưa vào Agent xử lý dữ liệu trước khi đưa ra quyết định. 
+- **Tools**: Để có được sự thông minh thì hệ thống cần phải có thêm thông tin chính xác từ các hệ thống khác để lấy dữ liệu và đưa vào Agent xử lý dữ liệu trước khi đưa ra quyết định.
 
 Ví dụ: Ngày mai có nên đi chơi ở Đà Lạt? Thì sẽ gọi API thời tiết để kiểm tra xem thời tiết ngày mai như thế nào? Sau đó đưa dữ liệu về Agent để phân tích.
 
@@ -52,9 +54,10 @@ Ví dụ: Trong lĩnh vực tư vấn khách hàng thì sẽ lưu lại những 
 
 # 4. Cách hoạt động
 
-**4.1 Input** 
+**4.1 Input**
 
 Hệ thống AI Agent sẽ nhận được input, input này có thể là:
+
 - Message từ người dùng. (chatbot trong telegram,...)
 - Trigger từ các hệ thống. (Gmail,...)
 - Scheduler tự lên kế hoạch. (Tạo scheduler trong hệ thống)
@@ -63,12 +66,13 @@ Khi mà nhận được input thì sẽ chuyển đến thành phần AI Agent.
 
 **4.2 Agent**
 
-Ở đây Agent sẽ tiếp nhận input và sẽ xử lý thông tin, nếu được cấu hình tools, gọi API từ bên khác thì sẽ gọi API để lấy thông tin. Nếu cần memory thì sẽ query để lấy memory. 
-Sau khi collect được các thông tin thì sẽ sưu tầm lại, và chỉnh sửa câu prompt cho đẹp và tốt, sau đó gọi đến GenAI để nhận kết quả. 
+Ở đây Agent sẽ tiếp nhận input và sẽ xử lý thông tin, nếu được cấu hình tools, gọi API từ bên khác thì sẽ gọi API để lấy thông tin. Nếu cần memory thì sẽ query để lấy memory.
+Sau khi collect được các thông tin thì sẽ sưu tầm lại, và chỉnh sửa câu prompt cho đẹp và tốt, sau đó gọi đến GenAI để nhận kết quả.
 
 Ở đây mình chỉ nói đơn gian về Agent, chứ thực tế có thể có rất nhiều bước như:
-- Sau khi có kết quả từ GenAI có thể sẽ collection tiếp và gửi GenAI tiếp. 
-- Cập nhật memory 
+
+- Sau khi có kết quả từ GenAI có thể sẽ collection tiếp và gửi GenAI tiếp.
+- Cập nhật memory
 - Thực hiện một số tác vụ khác
 
 **4.3 Output**
@@ -140,4 +144,4 @@ Ví dụ: AI trong máy bay không người lái (drone), hệ thống tưới t
 
 # 6. Kết luận
 
-Qua bài viết, chúng ta đã cùng tìm hiểu AI Agent là gì, nguyên lý hoạt động, các ứng dụng thực tiễn và những tiềm năng mà công nghệ này mang lại. Trong kỷ nguyên số, AI Agent không chỉ là một công cụ hỗ trợ mà còn đóng vai trò quan trọng trong việc cách mạng hóa quy trình làm việc, cải thiện hiệu suất và thúc đẩy đổi mới trong mọi lĩnh vực. Từ việc tự động hóa tác vụ đến cá nhân hóa trải nghiệm người dùng, AI Agent đang từng bước thay đổi cách chúng ta sống và làm việc. Việc nắm bắt và ứng dụng AI Agent ngay hôm nay chính là chìa khóa để các cá nhân và tổ chức vươn lên trong thế giới công nghệ đầy cạnh tranh. Hi vọng những nội dung từ AI Agent Viet Nam đã giúp bạn đọc hiểu rõ về AI Agent là gì và có thể khai thác công nghệ này hiệu quả hơn trong đời sống. 
+Qua bài viết, chúng ta đã cùng tìm hiểu AI Agent là gì, nguyên lý hoạt động, các ứng dụng thực tiễn và những tiềm năng mà công nghệ này mang lại. Trong kỷ nguyên số, AI Agent không chỉ là một công cụ hỗ trợ mà còn đóng vai trò quan trọng trong việc cách mạng hóa quy trình làm việc, cải thiện hiệu suất và thúc đẩy đổi mới trong mọi lĩnh vực. Từ việc tự động hóa tác vụ đến cá nhân hóa trải nghiệm người dùng, AI Agent đang từng bước thay đổi cách chúng ta sống và làm việc. Việc nắm bắt và ứng dụng AI Agent ngay hôm nay chính là chìa khóa để các cá nhân và tổ chức vươn lên trong thế giới công nghệ đầy cạnh tranh. Hi vọng những nội dung từ AI Agent Viet Nam đã giúp bạn đọc hiểu rõ về AI Agent là gì và có thể khai thác công nghệ này hiệu quả hơn trong đời sống.

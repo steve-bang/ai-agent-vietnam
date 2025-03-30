@@ -5,7 +5,9 @@ import { sortPosts } from 'pliny/utils/contentlayer.js'
 import { escape } from 'pliny/utils/htmlEscaper.js'
 import { allBlogs } from '../.contentlayer/generated/index.mjs'
 import siteMetadata from '../data/siteMetadata.js'
-import tagData from '../app/tag-data.json' with { type: 'json' };
+import { createRequire } from 'module'
+const require = createRequire(import.meta.url)
+const tagData = require('../app/tag-data.json')
 
 const generateRssItem = (config, post) => `
   <item>
@@ -36,15 +38,14 @@ const generateRss = (config, posts, page = 'feed.xml') => `
 `
 
 async function generateRSS(config, allBlogs, page = 'feed.xml') {
-  try 
-  {
+  try {
     const publishPosts = allBlogs.filter((post) => post.draft !== true)
     // RSS for blog post
     if (publishPosts.length > 0) {
       const rss = generateRss(config, sortPosts(publishPosts))
       writeFileSync(`./public/${page}`, rss)
     }
-  
+
     if (publishPosts.length > 0) {
       for (const tag of Object.keys(tagData)) {
         const filteredPosts = allBlogs.filter((post) =>
@@ -56,10 +57,8 @@ async function generateRSS(config, allBlogs, page = 'feed.xml') {
         writeFileSync(path.join(rssPath, page), rss)
       }
     }
-  }
-  catch(error)
-  {
-    console.error('❌ RSS generation failed:', error);
+  } catch (error) {
+    console.error('❌ RSS generation failed:', error)
   }
 }
 
