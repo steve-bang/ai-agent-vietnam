@@ -1,9 +1,9 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Min71 Dev Blog',
-  author: 'Lee MinGi',
-  headerTitle: 'Min71 Dev Blog',
-  description: 'Step by step, but Steadily and Consistently 📝',
+  title: 'AI Agent Việt Nam',
+  author: 'Steve Bang',
+  headerTitle: 'AI Agent Việt Nam',
+  description: 'Đừng bao giờ bỏ cuộc',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://min71.dev',
@@ -11,11 +11,11 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/banner.jpeg',
   // mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'mingi3442@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/min71',
-  github: 'https://github.com/mingi3442',
-  twitter: 'https://twitter.com/min_71_dev',
+  email: 'mrsteve.bang@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/steve-bang-924ab6284/',
+  github: 'https://github.com/steve-bang',
   facebook: 'https://facebook.com',
+  locale:'vi-VN',
   // youtube: 'https://youtube.com',
   analytics: {
     // If you want to use an analytics provider you have to add it to the

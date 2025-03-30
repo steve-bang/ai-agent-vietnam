@@ -1,0 +1,143 @@
+---
+title: 'AI Agent là gì? Giới thiệu về AI Agent'
+date: '2025-03-30'
+lastmod: '2025-03-30'
+tags: ['AI', 'AI Agent']
+draft: false
+summary: 'Khái niệm về AI Agent là gì? Giới thiệu về AI Agent một cách cực kỳ dễ hiểu'
+images: ['/static/images/ai-agent-la-gi.png']
+canonicalUrl: 'https://aiagentvn.org/posts/n8n-la-gi-nhung-dieu-can-biet-ve-n8n-automation'
+---
+
+![AI Agent Components](/static/images/ai-agent-understand.png)
+
+# 1. Khái niệm AI Agent là gì?
+
+AI Agent là một hệ thống sử lý thông tin từ bên ngoài và đưa ra quyết định để giúp bạn đạt được mục đích. Cơ bản thì AI Agent hoạt động như sau:
+1. Lấy thông tin từ môi trường 
+2. Xử lý thông tin và đưa ra quyết định
+3. Thực hiện 1 hành động cụ thể
+4. Đạt được mục tiêu
+
+Nói đơn giản là giống như con người vậy, hệ thống sẽ tiếp nhận thông tin từ bên ngoài và suy nghĩ xử lý thông tin, sau đó dựa trên mục tiêu để đưa ra quyết định và cuối cùng là một hành động cụ thể.
+
+**Ví dụ thực tế**
+
+Trong lĩnh vực xe ô tô, thì AI Agent chính là hệ thống xe tự lái. Khi mà xe tiếp nhận được xung quanh môi trường, hoặc là phía trước xe có vật cản gì hay không thông qua camera của xe. Hệ thống sẽ thu thập thông tin và xử lý dữ liệu, và đưa ra quyết định và hành động là đi tiếp hay dừng lại hay rẻ phải hay rẽ trái? Thì đó là ví dụ đơn giản và dễ hiểu nhất về AI Agent.
+
+Bất kỳ hệ thống nào mà có các yếu tố tương tự như mình đã nêu ở trên thì đó chính là AI Agent.
+
+# 2. AI Agent với GenAI  
+
+GenAI hay còn gọi là Generative AI, trên thế giới cũng đã có những hệ thống GenAI này rồi như là ChatGPT, Grok, Gemini, DeepSeek,... Hệ thống AI này là giống như kiểu bạn hỏi gì trả lời đó, lấy thông tin từ input/ prompt của bạn và sẽ trả lời cho câu hỏi của bạn. 
+
+Trong hệ thống AI Agent sẽ dùng GenAI để xử lý thông tin và đưa ra quyết định hành động cụ thể nào đó. AI Agent cho thấy sự thông minh so với GenAI như thế nào? 
+
+# 3. Các thành phần
+
+![AI Agent Components](/static/images/ai-agent-components.png)
+
+Các thành phần trong AI Agent: 
+- **Input**: Đây là tác nhân bên ngoài để thực hiện, nó có thể là input từ user, có thể là scheduler đã được lên từ trước, từ webhook,...
+- **Tools**: Để có được sự thông minh thì hệ thống cần phải có thêm thông tin chính xác từ các hệ thống khác để lấy dữ liệu và đưa vào Agent xử lý dữ liệu trước khi đưa ra quyết định. 
+
+Ví dụ: Ngày mai có nên đi chơi ở Đà Lạt? Thì sẽ gọi API thời tiết để kiểm tra xem thời tiết ngày mai như thế nào? Sau đó đưa dữ liệu về Agent để phân tích.
+
+- **Memory**: Dữ liệu input/output cũng có thể sẽ được lưu trữ lại để tái sử dụng lại cho những lần tiếp theo. Trong AI Agent thì thành phần này quan trọng để thể hiện sự thông minh của nó. Memory này có 2 loại là: Ngắn hạn và dài hạn. Mỗi loại đều có những mục đích khác nhau nhằm tối ưu hoá memory.
+
+Ví dụ: Trong lĩnh vực tư vấn khách hàng thì sẽ lưu lại những câu hỏi của khách hàng để phục vụ trong việc khi khách hàng có trao đổi tiếp thì AI sẽ xử lý dữ liệu này và sẽ tiếp tục trả lời câu hỏi tiếp theo của khách hàng.
+
+- **Planning**: Có khả năng phân tích và lên chiến lược một cách thông minh và thích nghi với những thay đổi của nó.
+- **Agent**: Đây là trung tâm tiếp nhận và xử lý thông tin của Input. Cuối cùng thì AI Agent sẽ sưu tầm hết tất cả các thông tin của các component và tạo ra prompt để gửi đến GenAI và nhận kết quả, và trả về kết quả cho người dùng.
+
+# 4. Cách hoạt động
+
+**4.1 Input** 
+
+Hệ thống AI Agent sẽ nhận được input, input này có thể là:
+- Message từ người dùng. (chatbot trong telegram,...)
+- Trigger từ các hệ thống. (Gmail,...)
+- Scheduler tự lên kế hoạch. (Tạo scheduler trong hệ thống)
+
+Khi mà nhận được input thì sẽ chuyển đến thành phần AI Agent.
+
+**4.2 Agent**
+
+Ở đây Agent sẽ tiếp nhận input và sẽ xử lý thông tin, nếu được cấu hình tools, gọi API từ bên khác thì sẽ gọi API để lấy thông tin. Nếu cần memory thì sẽ query để lấy memory. 
+Sau khi collect được các thông tin thì sẽ sưu tầm lại, và chỉnh sửa câu prompt cho đẹp và tốt, sau đó gọi đến GenAI để nhận kết quả. 
+
+Ở đây mình chỉ nói đơn gian về Agent, chứ thực tế có thể có rất nhiều bước như:
+- Sau khi có kết quả từ GenAI có thể sẽ collection tiếp và gửi GenAI tiếp. 
+- Cập nhật memory 
+- Thực hiện một số tác vụ khác
+
+**4.3 Output**
+
+Sau khi xử lý xong dữ liệu thì AI Agent sẽ trả kết quả về cho người dùng, hoặc thực hiện hành động(tuỳ theo cấu hình của người dùng, có thể là gửi email, nhắn tin,...)
+
+# 5. Ứng dụng thực tế
+
+Hiện nay, AI Agent đang được ứng dụng rộng rãi trong nhiều lĩnh vực khác nhau nhờ khả năng tự động hóa, học hỏi và đưa ra quyết định thông minh. Dưới đây là một số ứng dụng thực tế nổi bật của AI Agent:
+
+**1. Trợ lý ảo & Chatbot thông minh**
+Ví dụ: Google Assistant, Siri, Alexa, ChatGPT, Gemini
+
+Ứng dụng: Hỗ trợ người dùng trả lời câu hỏi, đặt lịch hẹn, điều khiển smart home, gợi ý sản phẩm, xử lý yêu cầu khách hàng.
+
+**2. Tự động hóa doanh nghiệp (RPA - Robotic Process Automation)**
+
+Ví dụ: UiPath, Automation Anywhere, Microsoft Power Automate
+
+Ứng dụng: AI Agent tự động xử lý dữ liệu, nhập liệu, gửi email, quản lý đơn hàng, thanh toán hóa đơn… giúp tiết kiệm thời gian và giảm lỗi.
+
+**3. Giao dịch tài chính & Đầu tư**
+
+Ví dụ: AI Trading Bot (như QuantConnect, Alpaca), Robo-Advisor (Betterment, Wealthfront)
+
+Ứng dụng: Phân tích thị trường chứng khoán, giao dịch tự động, tư vấn đầu tư dựa trên dữ liệu và xu hướng.
+
+**4. Y tế & Chăm sóc sức khỏe**
+
+Ví dụ: IBM Watson Health, Ada Health, PathAI
+
+Ứng dụng: Chẩn đoán bệnh qua hình ảnh, phân tích dữ liệu bệnh nhân, hỗ trợ bác sĩ đưa ra phác đồ điều trị.
+
+**5. Xe tự hành & Logistics**
+
+Ví dụ: Tesla Autopilot, Waymo, AI trong hệ thống quản lý kho (Amazon Robotics)
+
+Ứng dụng: Xử lý tín hiệu giao thông, định tuyến đường, tự động vận chuyển hàng hóa.
+
+**6. Bảo mật & Phát hiện gian lận**
+
+Ví dụ: Darktrace, AI của PayPal, AI chống money laundering (AML)
+
+Ứng dụng: Phát hiện hoạt động bất thường, ngăn chặn tấn công mạng, cảnh báo giao dịch đáng ngờ.
+
+**7. Giáo dục & Đào tạo**
+
+Ví dụ: Duolingo, Khan Academy, AI Tutor (như ChatGPT giáo dục)
+
+Ứng dụng: Cá nhân hóa bài học, chấm điểm tự động, trả lời câu hỏi của học sinh.
+
+**8. Marketing & Khuyến nghị sản phẩm**
+
+Ví dụ: AI của Netflix, Spotify, Amazon Recommendation
+
+Ứng dụng: Phân tích hành vi người dùng, đề xuất nội dung phù hợp, tối ưu chiến dịch quảng cáo.
+
+**9. Game & Giải trí**
+
+Ví dụ: NPC thông minh trong game (như AI của OpenAI trong Dota 2), DeepMind AlphaGo
+
+Ứng dụng: Tạo nhân vật game có phản ứng tự nhiên, tự học cách chơi để thách thức người dùng.
+
+**10. Nông nghiệp thông minh**
+
+Ví dụ: AI trong máy bay không người lái (drone), hệ thống tưới tiêu tự động
+
+Ứng dụng: Phân tích đất đai, dự đoán sâu bệnh, tối ưu hóa năng suất cây trồng.
+
+# 6. Kết luận
+
+Qua bài viết, chúng ta đã cùng tìm hiểu AI Agent là gì, nguyên lý hoạt động, các ứng dụng thực tiễn và những tiềm năng mà công nghệ này mang lại. Trong kỷ nguyên số, AI Agent không chỉ là một công cụ hỗ trợ mà còn đóng vai trò quan trọng trong việc cách mạng hóa quy trình làm việc, cải thiện hiệu suất và thúc đẩy đổi mới trong mọi lĩnh vực. Từ việc tự động hóa tác vụ đến cá nhân hóa trải nghiệm người dùng, AI Agent đang từng bước thay đổi cách chúng ta sống và làm việc. Việc nắm bắt và ứng dụng AI Agent ngay hôm nay chính là chìa khóa để các cá nhân và tổ chức vươn lên trong thế giới công nghệ đầy cạnh tranh. Hi vọng những nội dung từ AI Agent Viet Nam đã giúp bạn đọc hiểu rõ về AI Agent là gì và có thể khai thác công nghệ này hiệu quả hơn trong đời sống. 

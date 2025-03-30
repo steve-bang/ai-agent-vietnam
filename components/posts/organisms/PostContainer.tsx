@@ -42,7 +42,7 @@ export default function PostContainer({
               <NavigationButton
                 color="primary"
                 href={`/posts/${slug}`}
-                title={'Read more'}
+                title={'Chi tiết'}
                 isArrow={true}
               />
             </div>

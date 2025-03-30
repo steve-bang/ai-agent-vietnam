@@ -17,63 +17,104 @@ export default function AboutContent() {
           defaultValue={'ko'} // 현재 선택된 언어를 표시
         >
           <option selected value="ko">
-            🇰🇷&nbsp;한국어
+            🇻🇳&nbsp;Việt Nam
           </option>
           <option value="en">🇺🇸&nbsp;English</option>
         </select>
       </div>
-      <div className="p-4">{isKorean ? <KoreanContent /> : <EnglishContent />}</div>
+      <div className="p-4">{isKorean ? <VietNamContent /> : <EnglishContent />}</div>
     </div>
   )
 }
 
-const KoreanContent = () => {
+const VietNamContent = () => {
   return (
     <div>
-      안녕하세요. 2년 차 Full Stack Developer 이민기입니다.
-      <br />
-      주로 React와 TypeScript를 이용하여 Front-end 개발을 하고 있습니다.
-      <br />
-      Back-end 개발은 Node.js와 Express, Nest.js를 이용하여 개발하고 있습니다.
-      <br />
-      DB는 MongoDB를 사용하고 있습니다.
-      <br />
-      BlockChain에 관심이 많으며, 특히 Cosmos Network에 관심이 있습니다.
-      <br />
-      다른 개발자들을 이해할 수 있는 다양한 경험과 전반적인 개발 과정을 배우고 있습니다.
-      <br />
-      지속 가능한 코드에 관심이 많으며, 지속 가능한 코드를 작성하기 위해 노력하고 있습니다.
-      <br />
-      커뮤니케이션에 있어 단어 선택에 중요성을 두고 있습니다.
-      <br />
-      문제를 해결하기 위해 근본적인 문제점을 생각한 후 해결을 위해 공부하는 것에 즐거움을 느낍니다.
-      <br />더 나은 방법을 찾기 위해 주변 사람들과 대화를 자주 나누며, 여러 가지 방법을 고민하는
-      것을 좋아합니다.
+      <header>
+        <h1>Xin chào, tôi là <span className="highlight">Steve Bang</span></h1>
+        <h2>Lập trình viên Full-stack với 4+ năm kinh nghiệm</h2>
+      </header>
+      <section className="about-me">
+        <h3>👨‍💻 Về tôi</h3>
+        <p>
+          Tôi là lập trình viên chuyên về hệ thống backend với đam mê xây dựng các giải pháp tối ưu.
+          Với hơn 3 năm làm việc tại các công ty product và outsource, tôi đã phát triển được nhiều kỹ năng quan trọng và cần thiết cho bản thân tôi.
+        </p>
+      </section>
+
+      <section className="expertise">
+        <h3>🛠 Kỹ năng chuyên môn</h3>
+        <ul className="skills">
+          <li><strong>Ngôn ngữ:</strong> C#, Java, Javascript, TypeScript.</li>
+          <li><strong>Framework/Công nghệ:</strong>Dot NET, Sprint Boot, Docker, Kubernetes</li>
+          <li><strong>Cơ sở dữ liệu:</strong> SQL Server, MySQL, MongoDB, PostgreSQL</li>
+          <li><strong>Khác:</strong> Azure, CI/CD, Microservices</li>
+        </ul>
+      </section>
+
+      <section className="experience">
+        <h3>💼 Kinh nghiệm làm việc</h3>
+        <div className="job">
+          <h4>Full stack - 1ByteSoftware</h4>
+          <p className="date">2022 - Đến nay</p>
+          <ul className="responsibilities">
+            <li>Trưởng dự án của hệ thống <a href='https://jframework.io/' target='_blank'>JFramework</a>, hệ thống mà 70% các sản phẩm đều cần đến, hệ thống giúp cho các project được triển khai nhanh chóng và có được nhiều thời gian để phát triển đúng tính năng cốt lỗi.</li>
+            <li>Phát triển hệ thống <a href='https://vardytests.com/' target='_blank'>VardyTests</a>, các bài tests cho các chứng chỉ thi nổi tiếng trên thế giới như IELTS, PTE, SAT,...</li>
+          </ul>
+          <h4>Full stack - 1ByteSoftware</h4>
+          <p className="date">2020 - 2022</p>
+          <ul className="responsibilities">
+            <li>Tham gia phát triển ứng dụng quản lý thư viện cho nhà trường.</li>
+          </ul>
+        </div>
+      </section>
     </div>
   )
 }
 const EnglishContent = () => {
   return (
     <div>
-      Hello, I'm Min Gi Lee and I'm a Full Stack Developer for 2 years.
-      <br />
-      I am mainly developing Front-end using React and TypeScript.
-      <br />
-      I am developing back-end using Node.js, Express, Nest.js, and db mainly uses mongodb
-      <br />
-      I'm very interested in BlockChain, especially Cosmos Network.
-      <br />
-      I am gaining various experiences to understand other developers and the overall development
-      process.
-      <br />
-      I'm very interested in sustainable code, and I'm trying to write sustainable code.
-      <br />
-      I place importance on word selection in communication.
-      <br />
-      I have fun studying for a solution after thinking about the fundamental problem to solve the
-      problem.
-      <br />I often talk to people around me to find a better way, and I like to think about
-      different ways.
+      <header>
+        <h1>Hello, I'm <span className="highlight">Steve Bang</span></h1>
+        <h2>Full-stack Developer with 4+ years of experience</h2>
+      </header>
+
+      <section className="about-me">
+        <h3>👨‍💻 About Me</h3>
+        <p>
+          I am a backend-focused developer with a passion for building optimized solutions.
+          With over 3 years of experience working at both product and outsourcing companies,
+          I have developed essential and critical skills for my career.
+        </p>
+      </section>
+
+      <section className="expertise">
+        <h3>🛠 Technical Skills</h3>
+        <ul className="skills">
+          <li><strong>Languages:</strong> C#, Java, JavaScript, TypeScript.</li>
+          <li><strong>Frameworks/Technologies:</strong> .NET, Spring Boot, Docker, Kubernetes</li>
+          <li><strong>Databases:</strong> SQL Server, MySQL, MongoDB, PostgreSQL</li>
+          <li><strong>Others:</strong> Azure, CI/CD, Microservices</li>
+        </ul>
+      </section>
+
+      <section className="experience">
+        <h3>💼 Work Experience</h3>
+        <div className="job">
+          <h4>Full Stack Developer - 1ByteSoftware</h4>
+          <p className="date">2022 - Present</p>
+          <ul className="responsibilities">
+            <li>Project lead for the <a href='https://jframework.io/' target='_blank'>JFramework</a> system, which is used in 70% of our products.
+              This system accelerates project deployment, allowing more time to develop core functionalities.</li>
+            <li>Developed the <a href='https://vardytests.com/' target='_blank'>VardyTests</a> platform, providing test preparation for renowned global certifications such as IELTS, PTE, SAT, etc.</li>
+          </ul>
+          <h4>Full Stack Developer - 1ByteSoftware</h4>
+          <p className="date">2020 - 2022</p>
+          <ul className="responsibilities">
+            <li>Contributed to developing a library management application for schools.</li>
+          </ul>
+        </div>
+      </section>
     </div>
   )
 }

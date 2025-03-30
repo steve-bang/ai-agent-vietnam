@@ -1,10 +1,9 @@
 export const headerNavLinks = [
-  { href: '/', title: 'Home' },
-  { href: '/posts', title: 'Posts' },
-  { href: '/tags', title: 'Tags' },
-  // { href: '/projects', title: 'Projects' },
-  // { href: '/about', title: 'About' },
-  { href: 'https://resume.min71.dev', title: 'Resume' },
+  { href: '/', title: 'Trang chủ' },
+  { href: '/posts', title: 'Bài viết' },
+  { href: '/projects', title: 'Dự án' },
+  { href: '/community', title: 'Cộng đồng' },
+  { href: '/about', title: 'Về chúng tôi' },
 ]
 
 export interface HeaderNavLink {

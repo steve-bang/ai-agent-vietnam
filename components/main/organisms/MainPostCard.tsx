@@ -43,13 +43,6 @@ const MainPostCard = ({ post, author }: MainPostCardProps) => {
             <Tag className="mr-2 my-1" key={tag} text={tag} />
           ))}
         </div>
-        {/* <NavigationButton
-          title="Read more"
-          href={`/posts/${slug}`}
-          isArrow={true}
-          color="primary"
-          buttonClassName="mt-3"
-        /> */}
         <PostAuthorSection author={author} date={date} />
       </div>
     </div>

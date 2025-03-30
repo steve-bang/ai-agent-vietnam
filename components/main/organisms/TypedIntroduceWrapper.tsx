@@ -18,10 +18,10 @@ export function TypedIntroduceWrapper() {
   useEffect(() => {
     const options = {
       strings: [
-        'Hello, Here is my personal blog! 📝',
-        `I've been working as a Web developer for 2 years 💻`,
-        'I am interested in blockchain network and web3.0 🔗',
-        'I am interested in Web Service and Web Application 🌐',
+        'Chào mừng bạn đã đến với AI Agent Việt Nam 🇻🇳',
+        `Nơi chia sẻ những kiến thức về AI Agent cho cộng đồng Việt Nam 💻`,
+        'Tiếp cận kiến thức AI Agent miễn phí 🔗',
+        'Giúp cho các doanh nghiệp tiếp cận AI để tối ưu hoá hiệu quả công việc 🌐',
       ],
       typeSpeed: 50,
       backSpeed: 30,
