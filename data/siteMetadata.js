@@ -6,8 +6,8 @@ const siteMetadata = {
   description: 'Đừng bao giờ bỏ cuộc',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://min71.dev',
-  siteRepo: 'https://github.com/mingi3442/blog',
+  siteUrl: 'https://steve-bang.com',
+  siteRepo: 'https://github.com/steve-bang/ai-agent-vietnam',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/banner.jpeg',
   // mastodon: 'https://mastodon.social/@mastodonuser',
