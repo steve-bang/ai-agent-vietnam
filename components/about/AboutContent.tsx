@@ -85,7 +85,7 @@ const VietNamContent = () => {
               , các bài tests cho các chứng chỉ thi nổi tiếng trên thế giới như IELTS, PTE, SAT,...
             </li>
           </ul>
-          <h4>Full stack - 1ByteSoftware</h4>
+          <h4>Back-End - R2S</h4>
           <p className="date">2020 - 2022</p>
           <ul className="responsibilities">
             <li>Tham gia phát triển ứng dụng quản lý thư viện cho nhà trường.</li>
@@ -156,7 +156,7 @@ const EnglishContent = () => {
               PTE, SAT, etc.
             </li>
           </ul>
-          <h4>Full Stack Developer - 1ByteSoftware</h4>
+          <h4>Back-End Developer - R2S</h4>
           <p className="date">2020 - 2022</p>
           <ul className="responsibilities">
             <li>Contributed to developing a library management application for schools.</li>
