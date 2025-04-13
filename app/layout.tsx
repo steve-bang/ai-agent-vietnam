@@ -11,6 +11,8 @@ import { Analytics } from '@vercel/analytics/react'
 import { Metadata } from 'next'
 import { SearchConfig, SearchProvider } from 'pliny/search'
 import { ThemeProviders } from './theme-providers'
+import Script from 'next/script'
+import { GoogleAdsenseClientId } from '@/data/google-ads-constants'
 // import { KBarProvider } from 'kbar'
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -84,6 +86,13 @@ export default function RootLayout({
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f1f1f1" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+      <Script
+        async
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${GoogleAdsenseClientId}`}
+        strategy="lazyOnload"
+        crossOrigin="anonymous"
+      />
+
       <body className="bg-white text-black antialiased dark:bg-gray-800 dark:text-white">
         <meta
           httpEquiv="Content-Security-Policy"
