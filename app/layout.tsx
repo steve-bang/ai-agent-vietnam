@@ -85,12 +85,10 @@ export default function RootLayout({
           httpEquiv="Content-Security-Policy"
           content="script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is https://va.vercel-scripts.com"
         />
+        <meta name="google-adsense-account" content="ca-pub-6370445772981932" />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f1f1f1" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6370445772981932"
-          crossOrigin="anonymous"></script>
 
       </Head>
 
