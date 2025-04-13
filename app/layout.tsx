@@ -11,7 +11,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { Metadata } from 'next'
 import { SearchConfig, SearchProvider } from 'pliny/search'
 import { ThemeProviders } from './theme-providers'
-// import { KBarProvider } from 'kbar'
+
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
