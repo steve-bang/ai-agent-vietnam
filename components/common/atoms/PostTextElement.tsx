@@ -1,7 +1,19 @@
 export const PostSummaryTextElement = ({ summary }: { summary: string }) => {
   return (
-    <p className="prose max-w-none mt-3 line-clamp-2 lg:line-clamp-none text-base text-slate-800 dark:text-slate-300 ">
-      {summary}
-    </p>
-  )
-}
+    <div className="relative group">
+      <p 
+        className="prose max-w-none mt-3 text-base text-slate-800 dark:text-slate-300 
+                   line-clamp-2 transition-all duration-200"
+        style={{
+          display: '-webkit-box',
+          WebkitBoxOrient: 'vertical',
+          overflow: 'hidden',
+        }}
+        title={summary}
+      >
+        {summary}
+      </p>
+    
+    </div>
+  );
+};
